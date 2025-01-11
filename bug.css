@@ -1,0 +1,10 @@
+The following CSS code snippet demonstrates an issue with unexpected behavior when using the `calc()` function with percentages and a `min-width` property:
+
+```css
+div {
+  width: calc(50% - 10px);
+  min-width: 200px;
+}
+```
+
+In this case, the `min-width` declaration is overridden by the `calc()` function when the available space is less than 200px. The expected behavior is for the div to maintain a minimum width of 200px, regardless of the percentage calculation.
