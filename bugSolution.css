@@ -1,0 +1,10 @@
+To fix this issue, ensure that the `min-width` declaration is applied after the `width` declaration that uses `calc()`. This ensures that the `min-width` acts as a constraint on the minimum size of the element. If the `calc()` expression results in a smaller width, the `min-width` will take precedence.
+
+```css
+div {
+  min-width: 200px;
+  width: calc(50% - 10px);
+}
+```
+
+This revised CSS code correctly applies the `min-width` constraint.  The `min-width` declaration overrides the `calc()` result when necessary.
